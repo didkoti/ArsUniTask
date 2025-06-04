@@ -5,9 +5,9 @@ import java.util.*;
 
 public class EventRegistrationSteps {
     private String loggedInUser = null;
-    private String loggedInRole = null; // "member", "admin", "blocked", null
-    private Map<String, Boolean> events = new HashMap<>(); // eventName -> isFull
-    private Set<String> registered = new HashSet<>(); // "user:event"
+    private String loggedInRole = null;
+    private Map<String, Boolean> events = new HashMap<>();
+    private Set<String> registered = new HashSet<>();
     private String lastMessage = null;
     private boolean registrationSuccess = false;
 
@@ -19,7 +19,7 @@ public class EventRegistrationSteps {
 
     @Given("there is an upcoming event {string}")
     public void there_is_an_upcoming_event(String event) {
-        events.put(event, false); // not full
+        events.put(event, false);
     }
 
     @Given("a blocked club member {string} is logged in")
@@ -107,7 +107,7 @@ public class EventRegistrationSteps {
             registrationSuccess = false;
             return;
         }
-        // Success
+
         registered.add(actualUser + ":" + event);
         lastMessage = "Registration successful!";
         registrationSuccess = true;

@@ -5,11 +5,11 @@ import java.util.*;
 
 public class GameRatingSteps {
     private String loggedInUser = null;
-    private String loggedInRole = null; // "member", "admin", "blocked", null
-    private Set<String> attended = new HashSet<>(); // "user:event:game"
+    private String loggedInRole = null;
+    private Set<String> attended = new HashSet<>();
     private Set<String> games = new HashSet<>(); // game names
-    private Map<String, List<Integer>> ratings = new HashMap<>(); // game -> list of ratings
-    private Map<String, List<String>> comments = new HashMap<>(); // game -> list of comments
+    private Map<String, List<Integer>> ratings = new HashMap<>();
+    private Map<String, List<String>> comments = new HashMap<>();
     private String lastMessage = null;
     private boolean ratingSuccess = false;
 
